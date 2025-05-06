@@ -7,7 +7,7 @@
         "Properties": {
           "TaskDefinition": "<TASK_DEFINITION>",
           "LoadBalancerInfo": {
-            "ContainerName": "container-blacklist-app",
+            "ContainerName": "container-blacklist-python",
             "ContainerPort": 5000
           }
         }
