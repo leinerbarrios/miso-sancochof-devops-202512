@@ -12,7 +12,7 @@
 
       "image": "<IMAGE1_NAME>",
       "essential": true,
-      "name": "container-blacklist-python"
+      "name": "container-blacklist-app"
     }
   ],
 
@@ -22,5 +22,31 @@
   "networkMode": "awsvpc",
   "cpu": "1024",
   "memory": "3072",
-  "family": "task-blacklist-app"
+  "family": "task-blacklist-app",
+  "environment": [
+      {
+        "name": "RDS_DB_NAME",
+        "value": "postgres"
+      },
+      {
+        "name": "RDS_HOSTNAME",
+        "value": "blacklistdb.ck56sy64gquc.us-east-1.rds.amazonaws.com"
+      },
+      {
+        "name": "RDS_PASSWORD",
+        "value": "12345678"
+      },
+      {
+        "name": "RDS_PORT",
+        "value": "5432"
+      },
+      {
+        "name": "RDS_USERNAME",
+        "value": "postgres"
+      },
+      {
+        "name": "SECRET_TOKEN",
+        "value": "querty"
+      }
+    ]
 }
