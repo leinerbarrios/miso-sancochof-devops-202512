@@ -17,7 +17,7 @@ phases:
       - echo Pushing the Docker image
       - docker push 816292901557.dkr.ecr.us-east-1.amazonaws.com/sancochoft/blacklist-app:latest
       - echo Writing Image Definitions file...
-      - printf '[{"name":"Blacklist-app-python-container","imageUri":"816292901557.dkr.ecr.us-east-1.amazonaws.com/sancochoft/blacklist-app:latest"}]' > imagedefinitions.json
+      - printf '[{"name":"container-blacklist-app","imageUri":"816292901557.dkr.ecr.us-east-1.amazonaws.com/sancochoft/blacklist-app:latest"}]' > imagedefinitions.json
       - printf '{"ImageURI":"816292901557.dkr.ecr.us-east-1.amazonaws.com/sancochoft/blacklist-app:latest"}' > imageDetail.json
       - cat imagedefinitions.json
 
