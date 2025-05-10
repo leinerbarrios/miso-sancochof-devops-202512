@@ -13,6 +13,7 @@ phases:
       - docker tag sancochoft/blacklist-app:latest 816292901557.dkr.ecr.us-east-1.amazonaws.com/sancochoft/blacklist-app:latest
   post_build:
     commands:
+      - echo Initializing the Docker image...
       - echo Build completed on `date`
       - echo Pushing the Docker image
       - docker push 816292901557.dkr.ecr.us-east-1.amazonaws.com/sancochoft/blacklist-app:latest
